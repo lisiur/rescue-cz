@@ -1,41 +1,28 @@
-import { defineComponent, ref, watch } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import { Tabbar, TabbarItem } from 'vant'
-import { useRouter } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
-    enum TabKey {
-      Home = 0,
-      Friends = 1,
-      Airdrop = 2
-    }
-
-    const TabRouteName = {
-      [TabKey.Home]: 'home',
-      [TabKey.Friends]: 'friends',
-      [TabKey.Airdrop]: 'airdrop'
-    }
-
     const router = useRouter()
-    const active = ref<TabKey>(TabKey.Home)
-    watch(
-      active,
-      (value) => {
-        router.push({
-          name: TabRouteName[value]
-        })
-      },
-      {
-        immediate: true
-      }
-    )
+
+    onMounted(() => {
+      router.push('/home')
+    })
 
     return () => (
       <div>
-        <Tabbar v-model={active.value}>
-          <TabbarItem icon="home-o">SeeUSoon</TabbarItem>
-          <TabbarItem icon="friends-o">Friends</TabbarItem>
-          <TabbarItem icon="search">Airdrop</TabbarItem>
+        <RouterView />
+        <Tabbar route>
+          <TabbarItem replace to="/home" icon="home-o">
+            SeeUSoon
+          </TabbarItem>
+          <TabbarItem replace to="/friends" icon="friends-o">
+            Friends
+          </TabbarItem>
+          <TabbarItem replace to="/airdrop" icon="search">
+            Airdrop
+          </TabbarItem>
         </Tabbar>
       </div>
     )

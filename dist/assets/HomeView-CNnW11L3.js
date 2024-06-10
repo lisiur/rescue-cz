@@ -1,1 +1,0 @@
-import{B as e}from"./index-BSVPZwpf.js";import{d as t,c as o,b as r}from"./index-Hv8BypQT.js";import"./index-BiMO1Y3p.js";const s=t({setup(){return()=>o(e,null,{default:()=>[r("TEST")]})}});export{s as default};
