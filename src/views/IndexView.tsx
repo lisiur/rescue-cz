@@ -1,11 +1,19 @@
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
 import { Tabbar, TabbarItem } from 'vant'
-import { RouterView, useRouter } from 'vue-router'
+import { RouterView, useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
     const router = useRouter()
-    router.push('/home')
+    const route = useRoute()
+    const tgWebAppData: any = route.query?.tgWebAppData ?? ''
+    const query = new URLSearchParams(tgWebAppData)
+    const user = JSON.parse(query.get('user') ?? '{}')
+    console.log(user)
+
+    onMounted(() => {
+      router.push('/home')
+    })
 
     return () => (
       <div class="h-full flex flex-col">
