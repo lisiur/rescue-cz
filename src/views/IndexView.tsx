@@ -11,8 +11,11 @@ export default defineComponent({
     })
 
     return () => (
-      <div>
-        <RouterView />
+      <div class="h-full flex flex-col">
+        <div class="flex-1 overflow-auto">
+          <RouterView />
+        </div>
+        <div class="h-[var(--van-tabbar-height)]"></div>
         <Tabbar route>
           <TabbarItem replace to="/home" icon="home-o">
             SeeUSoon
