@@ -1,14 +1,11 @@
-import { defineComponent, onMounted } from 'vue'
+import { defineComponent } from 'vue'
 import { Tabbar, TabbarItem } from 'vant'
 import { RouterView, useRouter } from 'vue-router'
 
 export default defineComponent({
   setup() {
     const router = useRouter()
-
-    onMounted(() => {
-      router.push('/home')
-    })
+    router.push('/home')
 
     return () => (
       <div class="h-full flex flex-col">
