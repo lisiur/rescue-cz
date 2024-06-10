@@ -1,0 +1,1 @@
+import{d as e,c as t,b as o}from"./index-BGrw6fYe.js";import{B as r}from"./index-C1eUfbTe.js";import"./index-BRcR74Sx.js";const n=e({setup(){return()=>t(r,null,{default:()=>[o("view")]})}});export{n as default};

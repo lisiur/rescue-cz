@@ -3,6 +3,6 @@ import { Button } from 'vant'
 
 export default defineComponent({
   setup() {
-    return () => <Button>TEST</Button>
+    return () => <Button>Friends</Button>
   }
 })
