@@ -1,1 +1,0 @@
-import{d as e,c as t,b as o}from"./index-BGrw6fYe.js";import{B as r}from"./index-C1eUfbTe.js";import"./index-BRcR74Sx.js";const d=e({setup(){return()=>t(r,null,{default:()=>[o("Friends")]})}});export{d as default};

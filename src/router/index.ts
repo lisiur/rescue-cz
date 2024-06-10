@@ -1,4 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import IndexView from '../views/IndexView'
+import HomeView from '../views/HomeView'
+import FriendsView from '../views/FriendsView'
+import AirdropView from '../views/AirdropView'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -6,22 +10,22 @@ const router = createRouter({
     {
       path: '/',
       name: 'index',
-      component: () => import('../views/IndexView'),
+      component: IndexView,
       children: [
         {
           path: 'home',
           name: 'home',
-          component: () => import('../views/HomeView')
+          component: HomeView
         },
         {
           path: 'friends',
           name: 'friends',
-          component: () => import('../views/FriendsView')
+          component: FriendsView
         },
         {
           path: 'airdrop',
           name: 'airdrop',
-          component: () => import('../views/AirdropView')
+          component: AirdropView
         }
       ]
     }
