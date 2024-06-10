@@ -1,0 +1,1 @@
+import{B as e}from"./index-DywYjXwQ.js";import{d as t,c as o,b as r}from"./index-CzKxMe-f.js";import"./index-RDCkewVz.js";const s=t({setup(){return()=>o(e,null,{default:()=>[r("TEST")]})}});export{s as default};
