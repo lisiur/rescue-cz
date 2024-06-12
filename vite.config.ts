@@ -11,6 +11,9 @@ import { VantResolver } from '@vant/auto-import-resolver'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
+  build: {
+    outDir: 'docs'
+  },
   plugins: [
     vue(),
     vueJsx(),

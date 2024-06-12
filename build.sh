@@ -1,2 +1,2 @@
 npm run build
-cp dist/index.html dist/404.html
+cp docs/index.html docs/404.html
